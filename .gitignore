@@ -1,0 +1,15 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Entorno
+.env
+.env.local
