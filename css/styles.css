@@ -1217,7 +1217,18 @@ a:hover .btn-arrow { transform: translateX(6px); }
   .hero-inner { padding-left: 22px; padding-right: 22px; }
   .hero-title { font-size: clamp(32px, 9vw, 46px); }
   .hero-lead { font-size: 16px; }
-  .hero-cta-row { gap: 12px; }
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .hero-cta-row .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
   .big-words-band { padding: clamp(40px, 10vw, 64px) 22px; }
   .big-words-band .big-words {
@@ -1265,29 +1276,17 @@ a:hover .btn-arrow { transform: translateX(6px); }
    Animaciones más leves en mobile
    ============================================================= */
 @media (max-width: 760px) {
-  /* Hero decorativo: se apagan los bucles continuos (auroras, trazos,
-     pulsos, brillo del logo) para aliviar CPU/GPU y reducir ruido. */
+  /* Hero decorativo en mobile: se saca el logo, las auroras, la grilla y
+     la luz del cursor. Solo quedan los trazos SVG con sus puntos. */
+  .hero-logo,
   .hero-aurora,
-  .hero-traces,
-  .ac-flow,
-  .ac-pulse,
-  .ac-ring,
-  .ac-trace,
-  .logo-sweep {
-    animation: none !important;
-  }
-  .hero-traces { opacity: .55; }
-  .hero-logo__img { opacity: .22; filter: none; }
+  .hero-grid,
+  .hero-cursor { display: none; }
 
-  /* Auroras reubicadas hacia el margen derecho para no competir con el texto */
-  .hero-a1 { right: -220px; top: -260px; opacity: .6; }
-  .hero-a2 { right: -200px; bottom: -320px; opacity: .5; }
+  /* Trazos SVG: se mantienen las líneas y los puntos animados. */
+  .hero-traces { opacity: .7; }
 
-  /* Logo: sin flotación; revelado suave y corto. */
-  .ac-float { animation: none !important; }
-  .ac-reveal { animation-duration: 1.6s; }
-
-  /* Entradas del hero: recorridos más chicos y sin rotación. */
+  /* Entradas del hero: recorridos más chicos. */
   .hw > span {
     animation-duration: .55s;
     animation-delay: calc(.12s + var(--i) * .05s);
