@@ -209,13 +209,13 @@ img { max-width: 100%; }
 }
 .hero-a1 {
   width: 640px; height: 640px;
-  right: -140px; top: -180px;
+  right: -160px; top: -220px;
   background: radial-gradient(circle, rgba(139,224,78,.36), rgba(139,224,78,0) 65%);
   animation: auroraA 16s ease-in-out infinite alternate;
 }
 .hero-a2 {
-  width: 540px; height: 540px;
-  right: 24%; bottom: -280px;
+  width: 560px; height: 560px;
+  right: -80px; bottom: -300px;
   background: radial-gradient(circle, rgba(95,211,141,.24), rgba(95,211,141,0) 65%);
   animation: auroraB 21s ease-in-out infinite alternate;
 }
@@ -547,7 +547,7 @@ a:hover .btn-arrow { transform: translateX(6px); }
 .valor-title {
   margin: 0;
   font-family: var(--font-sans);
-  font-weight: 600;
+  font-weight: 800;
   font-size: clamp(30px, 4vw, 52px);
   line-height: 1.1;
   letter-spacing: -0.015em;
@@ -1194,12 +1194,7 @@ a:hover .btn-arrow { transform: translateX(6px); }
 }
 @media (max-width: 480px) {
   .hero-logo { width: 320px; height: 320px; right: -140px; margin-top: -160px; }
-  .big-words-band .big-words { gap: 8px 40px; font-size: clamp(26px, 8vw, 34px); }
-  .big-words-band .big-words > span:not(:last-child)::after {
-    right: -22px;
-    width: 6px;
-    height: 6px;
-  }
+  .big-words-band .big-words { font-size: clamp(28px, 10vw, 38px); }
 }
 
 /* =============================================================
@@ -1224,7 +1219,26 @@ a:hover .btn-arrow { transform: translateX(6px); }
   .hero-lead { font-size: 16px; }
   .hero-cta-row { gap: 12px; }
 
-  .big-words-band { padding: 40px 0; }
+  .big-words-band { padding: clamp(40px, 10vw, 64px) 22px; }
+  .big-words-band .big-words {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(34px, 12vw, 35px);
+    line-height: 1.08;
+    justify-content: center;
+    text-align: center;
+  }
+  .big-words-band .big-words > span:not(:last-child)::after { display: none; }
+
+  /* Animación de entrada propia de la franja en mobile */
+  .big-words-band .big-words > span {
+    animation: bwIn .7s cubic-bezier(.2,.8,.2,1) both;
+    animation-timeline: auto;
+  }
+  .big-words-band .big-words > span:nth-child(1) { animation-delay: .05s; }
+  .big-words-band .big-words > span:nth-child(2) { animation-delay: .18s; }
+  .big-words-band .big-words > span:nth-child(3) { animation-delay: .31s; }
 
   .note { margin-top: 36px; font-size: 17px; }
 
@@ -1245,6 +1259,56 @@ a:hover .btn-arrow { transform: translateX(6px); }
 @media (max-width: 380px) {
   .btn { width: 100%; justify-content: center; }
   .hero-cta-row { flex-direction: column; align-items: stretch; }
+}
+
+/* =============================================================
+   Animaciones más leves en mobile
+   ============================================================= */
+@media (max-width: 760px) {
+  /* Hero decorativo: se apagan los bucles continuos (auroras, trazos,
+     pulsos, brillo del logo) para aliviar CPU/GPU y reducir ruido. */
+  .hero-aurora,
+  .hero-traces,
+  .ac-flow,
+  .ac-pulse,
+  .ac-ring,
+  .ac-trace,
+  .logo-sweep {
+    animation: none !important;
+  }
+  .hero-traces { opacity: .55; }
+  .hero-logo__img { opacity: .22; filter: none; }
+
+  /* Auroras reubicadas hacia el margen derecho para no competir con el texto */
+  .hero-a1 { right: -220px; top: -260px; opacity: .6; }
+  .hero-a2 { right: -200px; bottom: -320px; opacity: .5; }
+
+  /* Logo: sin flotación; revelado suave y corto. */
+  .ac-float { animation: none !important; }
+  .ac-reveal { animation-duration: 1.6s; }
+
+  /* Entradas del hero: recorridos más chicos y sin rotación. */
+  .hw > span {
+    animation-duration: .55s;
+    animation-delay: calc(.12s + var(--i) * .05s);
+  }
+  .hi-up { animation-duration: .5s; }
+  .hi-down { animation-duration: .5s; }
+
+  /* Barrido del botón: menos frecuente. */
+  .btn-shine::after { animation-duration: 8s; animation-delay: 4s; }
+
+  /* Apertura del acordeón más sutil. */
+  .accordion .hv-row p { animation-duration: .22s; }
+}
+
+/* Keyframes alternativos (recorridos reducidos) para mobile */
+@media (max-width: 760px) {
+  @keyframes acFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  @keyframes wordUp { from { transform: translateY(105%); opacity: 0; } to { transform: none; opacity: 1; } }
+  @keyframes hiUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  @keyframes hiDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+  @keyframes bwIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 }
 
 /* Reduced motion */
