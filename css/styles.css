@@ -476,26 +476,14 @@ main:focus, main:focus-visible { outline: none; }
   padding-top: 18px;
   border-top: 1px solid var(--color-line-dark);
 }
-.sc-col__num {
-  display: block;
-  font-size: clamp(36px, 2.6vw, 40px);
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -.03em;
-  color: var(--color-sand);
-  font-variant-numeric: tabular-nums;
-  transition: color .18s ease, transform .18s ease;
-}
-.sc-col h3 { margin: 14px 0 10px; font-size: 20px; line-height: 1.3; color: var(--color-cream); }
+.sc-col h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.3; color: var(--color-cream); }
 .sc-col p { margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--color-sand); }
 
 /* ---------- Números: reveal editorial ---------- */
 .rows .row:nth-child(2),
-.steps .step:nth-child(2),
-.sectores-grid .sc-col:nth-child(2) { --stagger: 1; }
+.steps .step:nth-child(2) { --stagger: 1; }
 .rows .row:nth-child(3),
-.steps .step:nth-child(3),
-.sectores-grid .sc-col:nth-child(3) { --stagger: 2; }
+.steps .step:nth-child(3) { --stagger: 2; }
 .rows .row:nth-child(4),
 .steps .step:nth-child(4) { --stagger: 3; }
 .rows .row:nth-child(5),
@@ -516,16 +504,14 @@ main:focus, main:focus-visible { outline: none; }
 
 @media (prefers-reduced-motion: no-preference) {
   .js-motion .row__num,
-  .js-motion .step__num,
-  .js-motion .sc-col__num {
+  .js-motion .step__num {
     opacity: 0;
     transform: translateY(.22em);
     clip-path: inset(0 0 110% 0);
   }
 
   .js-motion .is-in-view .row__num,
-  .js-motion .is-in-view .step__num,
-  .js-motion .is-in-view .sc-col__num {
+  .js-motion .is-in-view .step__num {
     opacity: 1;
     transform: none;
     clip-path: inset(-10% 0 -10% 0);
@@ -539,8 +525,6 @@ main:focus, main:focus-visible { outline: none; }
   .row:focus-within .row__num { color: var(--color-olive); transform: translateX(4px); }
   .step:hover .step__num,
   .step:focus-within .step__num { color: var(--color-cream); transform: translateX(4px); }
-  .sc-col:hover .sc-col__num,
-  .sc-col:focus-within .sc-col__num { color: var(--color-cream); transform: translateX(4px); }
 }
 
 /* ---------- Institucional ---------- */
@@ -698,7 +682,6 @@ main:focus, main:focus-visible { outline: none; }
   .row__num { padding-top: 1px; font-size: clamp(30px, 8vw, 32px); }
   .rows--stack .row { grid-template-columns: 48px minmax(0, 1fr); }
   .step__num { font-size: 36px; }
-  .sc-col__num { font-size: 32px; }
 }
 
 @media (max-width: 700px) {

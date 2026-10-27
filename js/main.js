@@ -99,7 +99,7 @@
   /* ---------- Números: reveal editorial ---------- */
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduceMotion && 'IntersectionObserver' in window) {
-    var numberItems = document.querySelectorAll('.rows .row, .steps .step, .sectores-grid .sc-col');
+    var numberItems = document.querySelectorAll('.rows .row, .steps .step');
     if (numberItems.length) {
       try {
         document.documentElement.classList.add('js-motion');
