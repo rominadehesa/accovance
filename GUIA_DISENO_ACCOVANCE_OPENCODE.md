@@ -27,8 +27,11 @@ Usar estos colores como tokens globales. Mantener los mismos valores en toda la 
 | `--color-forest-soft` | `#2C3326` | Variación sutil de fondos oscuros |
 | `--color-olive` | `#37462B` | Color principal de marca, enlaces y botones |
 | `--color-olive-hover` | `#2A3620` | Hover de enlaces y botones |
-| `--color-accent` | `#A3E635` | Acento verde lima para detalles, indicadores y elementos destacados |
-| `--color-accent-soft` | `#B7C99D` | Acentos secundarios y detalles suaves |
+| `--color-accent` | `#C8912B` | Acento ocre para detalles, indicadores y elementos destacados |
+| `--color-accent-soft` | `#D9C7A3` | Arena cálida: textos y acentos secundarios sobre fondos oscuros |
+| `--color-label` | `#8A5A10` | Ocre oscuro para etiquetas sobre fondos claros |
+| `--color-yellow` | `#F2A900` | Destello cálido decorativo (solo trazos SVG) |
+| `--color-yellow-soft` | `#FFD166` | Destello cálido suave (solo trazos SVG) |
 | `--color-cream` | `#F6F4EC` | Fondo claro principal |
 | `--color-paper` | `#F4F6F1` | Fondo alternativo claro |
 | `--color-line` | `#D9DED3` | Bordes, divisores y líneas de tarjetas |
@@ -38,7 +41,9 @@ Usar estos colores como tokens globales. Mantener los mismos valores en toda la 
 
 Reglas:
 - El verde oscuro y el crema deben construir la base visual.
-- El verde lima es un acento: usarlo con moderación, no como fondo de grandes bloques de texto.
+- El ocre es un acento: usarlo con moderación, no como fondo de grandes bloques de texto con texto claro encima.
+- Sobre oliva, usar la variante clara `#E3B24A` para texto de acento (AA 5.18); el ocre base `#C8912B` no alcanza 4.5:1 sobre oliva.
+- El amarillo `#F2A900`/`#FFD166` queda reservado a los trazos SVG decorativos.
 - Verificar contraste y legibilidad en todos los tamaños.
 - En fondos oscuros, usar texto claro; en fondos claros, usar texto oscuro.
 - Evitar sombras fuertes, degradados decorativos excesivos y colores fuera de la paleta.
@@ -147,14 +152,17 @@ Variables CSS sugeridas:
   --color-forest-soft: #2C3326;
   --color-olive: #37462B;
   --color-olive-hover: #2A3620;
-  --color-accent: #A3E635;
-  --color-accent-soft: #B7C99D;
+  --color-accent: #C8912B;
+  --color-accent-soft: #D9C7A3;
+  --color-label: #8A5A10;
   --color-cream: #F6F4EC;
   --color-paper: #F4F6F1;
   --color-line: #D9DED3;
   --color-text: #22261F;
   --color-text-muted: #5B6355;
   --color-white: #FFFFFF;
+  --color-yellow: #F2A900;
+  --color-yellow-soft: #FFD166;
 
   --container-width: 1200px;
   --container-gutter: 24px;
@@ -235,7 +243,7 @@ Contenido:
 
 Diseño:
 - Fondo verde oscuro `#22261F`.
-- Título en crema o blanco, con acento lima solo en palabras o detalles puntuales si se necesita.
+- Título en crema o blanco, con acento ocre solo en palabras o detalles puntuales si se necesita.
 - Título display de 64–78 px en escritorio y 40–46 px en móvil.
 - Bajada de 19–21 px en escritorio y 18–19 px en móvil, con ancho máximo de lectura.
 - Mantener aire visual y una composición editorial. No llenar todos los espacios disponibles con elementos decorativos.
