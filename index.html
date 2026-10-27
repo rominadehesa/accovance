@@ -1,33 +1,39 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ACCOVANCE — Consultoría Contable y Empresarial</title>
 <meta name="description" content="Acompañamos a empresas y PyMEs integrando análisis contable, financiero y de gestión para tomar mejores decisiones.">
 <meta name="theme-color" content="#37462B">
-<link rel="icon" href="./assets/logo.png" type="image/png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./assets/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon-180.png">
 
-<!-- TODO: reemplazar por URL absoluta (https://…) cuando el sitio esté publicado -->
+<!-- TODO: reemplazar og:image/twitter:image por URL absoluta (https://…) cuando el sitio esté publicado -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ACCOVANCE">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="ACCOVANCE — Consultoría Contable y Empresarial">
 <meta property="og:description" content="Estrategia y gestión para tomar mejores decisiones. Consultoría contable, financiera y de gestión para empresas y PyMEs.">
-<meta property="og:image" content="./assets/logo.png">
+<meta property="og:image" content="./assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ACCOVANCE — Estrategia y gestión para tomar mejores decisiones">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ACCOVANCE — Consultoría Contable y Empresarial">
 <meta name="twitter:description" content="Estrategia y gestión para tomar mejores decisiones.">
-<meta name="twitter:image" content="./assets/logo.png">
-<!-- TODO: <link rel="canonical" href="https://…"> cuando exista el dominio -->
+<meta name="twitter:image" content="./assets/og-cover.jpg">
+<meta name="twitter:image:alt" content="ACCOVANCE — Estrategia y gestión para tomar mejores decisiones">
+<!-- TODO: <link rel="canonical" href="https://…"> y og:url cuando exista el dominio -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/styles.css">
-<link rel="preload" as="image" href="./assets/logo.png">
 
-<!-- TODO: completar url, sameAs (redes), telephone y email con los datos reales -->
+<!-- TODO: completar url, sameAs (redes), telephone y email con los datos reales.
+     Cuando exista el dominio, usar logo/url absolutas. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,26 +41,78 @@
   "name": "ACCOVANCE",
   "slogan": "Entender. Decidir. Crecer.",
   "description": "Consultoría contable, financiera y de gestión para empresas y PyMEs.",
-  "areaServed": "AR",
+  "logo": "./assets/logo-960.webp",
+  "areaServed": [
+    { "@type": "City", "name": "Rauch" },
+    { "@type": "AdministrativeArea", "name": "Provincia de Buenos Aires" },
+    { "@type": "Country", "name": "Argentina" }
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Rauch",
     "addressRegion": "Provincia de Buenos Aires",
     "addressCountry": "AR"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de consultoría",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultoría Contable e Impositiva" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestión Económica y Financiera" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estrategia y Gestión Empresarial" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desarrollo Comercial" } }
+    ]
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre un contador y un consultor contable?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El contador se ocupa del cumplimiento contable e impositivo. La consultoría integra esa información con finanzas, procesos y estrategia para acompañar las decisiones de gestión. En Accovance trabajamos ambas dimensiones de manera conjunta." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿A qué tipo de empresas acompañan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos con PyMEs y empresas de distintos sectores, con especial conocimiento en farmacias, agro, comercios y servicios. Cada acompañamiento se adapta al tamaño, la actividad y la etapa del negocio." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajan de forma presencial o virtual?",
+      "acceptedAnswer": { "@type": "Answer", "text": "De ambas formas. La atención puede ser presencial en Rauch o virtual, según las necesidades y la ubicación de cada empresa." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo empieza el trabajo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Comienza con una primera conversación para conocer la empresa, su situación y sus necesidades. Luego definimos un diagnóstico y un plan de acción con prioridades." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecen soluciones estándar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Cada intervención parte de la realidad, los recursos y los objetivos de cada empresa. Por eso no trabajamos con paquetes cerrados." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde están ubicados?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En Rauch, Provincia de Buenos Aires. Atendemos empresas de la zona y también de manera virtual." }
+    }
+  ]
 }
 </script>
 </head>
 <body>
 
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
-<div class="scroll-progress" aria-hidden="true"></div>
 
-<!-- ============ HEADER (sticky) ============ -->
-<header class="site-header hi-down">
+<!-- ============ HEADER ============ -->
+<header class="site-header">
   <a href="#inicio" class="brand">
     <div class="brand__mark">
-      <img src="./assets/logo.png" alt="" aria-hidden="true">
+      <img src="./assets/logo-mark-256.webp" alt="" aria-hidden="true" width="256" height="256" decoding="async">
     </div>
     <span class="brand__name">ACCOVANCE</span>
   </a>
@@ -63,229 +121,217 @@
     <a class="nav__link" href="#servicios" data-nav="servicios">Servicios</a>
     <a class="nav__link" href="#metodo" data-nav="metodo">Cómo trabajamos</a>
     <a class="nav__link" href="#sectores" data-nav="sectores">Sectores</a>
+    <a class="nav__link" href="#nosotros" data-nav="nosotros">Accovance</a>
     <a class="nav__cta" href="#contacto">Contacto</a>
   </nav>
 
   <details class="nav-menu" id="nav-menu">
-    <summary aria-label="Abrir menú de navegación">
+    <summary aria-label="Menú">
       <span class="nav-menu__bar" aria-hidden="true"></span>
       <span class="nav-menu__bar" aria-hidden="true"></span>
       <span class="nav-menu__bar" aria-hidden="true"></span>
     </summary>
     <div class="nav-menu__panel">
-      <a class="nav-menu__link" href="#inicio" data-nav="inicio">Inicio</a>
       <a class="nav-menu__link" href="#servicios" data-nav="servicios">Servicios</a>
       <a class="nav-menu__link" href="#metodo" data-nav="metodo">Cómo trabajamos</a>
       <a class="nav-menu__link" href="#sectores" data-nav="sectores">Sectores</a>
       <a class="nav-menu__link" href="#nosotros" data-nav="nosotros">Accovance</a>
-      <a class="nav-menu__link nav-menu__link--cta" href="#contacto" data-nav="contacto">Contacto</a>
+      <a class="nav-menu__link nav-menu__link--cta" href="#contacto">Contacto</a>
     </div>
   </details>
 </header>
 
+<main id="contenido" tabindex="-1">
+
 <!-- ============ HERO ============ -->
-<section id="inicio" class="hero" data-hero>
-  <div class="hero-aurora hero-a1" aria-hidden="true"></div>
-  <div class="hero-aurora hero-a2" aria-hidden="true"></div>
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-cursor" aria-hidden="true"></div>
-
-  <svg class="hero-traces" aria-hidden="true" viewBox="0 0 1440 760" preserveAspectRatio="xMaxYMid slice" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path class="ac-trace" pathLength="1000" d="M1440 130 H1290 L1150 270 H1090" stroke="rgba(217,199,163,0.35)" stroke-width="2" style="stroke-dasharray: 1000; animation-delay: 0.2s"></path>
-    <path class="ac-flow" pathLength="1000" d="M1440 130 H1290 L1150 270 H1090" stroke="var(--ac)" stroke-width="3" style="stroke-dasharray: 70 930; animation-delay: 2.4s"></path>
-    <circle class="ac-pulse" cx="1090" cy="270" r="7" fill="var(--ac)" style="animation-delay: 0.4s"></circle>
-    <circle class="ac-ring" cx="1090" cy="270" r="7" fill="none" stroke="var(--ac)" stroke-width="1.5" style="animation-delay: 1.2s"></circle>
-
-    <path class="ac-trace" pathLength="1000" d="M1440 650 H1340 L1210 520 H1140" stroke="rgba(217,199,163,0.35)" stroke-width="2" style="stroke-dasharray: 1000; animation-delay: 0.6s"></path>
-    <path class="ac-flow" pathLength="1000" d="M1440 650 H1340 L1210 520 H1140" stroke="var(--ac)" stroke-width="3" style="stroke-dasharray: 70 930; animation-delay: 3.4s; animation-duration: 5.5s"></path>
-    <circle class="ac-pulse" cx="1140" cy="520" r="7" fill="var(--ac)" style="animation-delay: 1.1s"></circle>
-    <circle class="ac-ring" cx="1140" cy="520" r="7" fill="none" stroke="var(--ac)" stroke-width="1.5" style="animation-delay: 2.1s"></circle>
-
-    <path class="ac-trace" pathLength="1000" d="M1440 400 H1390 L1320 470 V570" stroke="rgba(217,199,163,0.35)" stroke-width="2" style="stroke-dasharray: 1000; animation-delay: 1s"></path>
-    <path class="ac-flow" pathLength="1000" d="M1440 400 H1390 L1320 470 V570" stroke="var(--ac)" stroke-width="3" style="stroke-dasharray: 70 930; animation-delay: 4s; animation-duration: 4s"></path>
-    <circle class="ac-pulse" cx="1320" cy="570" r="7" fill="var(--ac)" style="animation-delay: 1.8s"></circle>
-    <circle class="ac-ring" cx="1320" cy="570" r="7" fill="none" stroke="var(--ac)" stroke-width="1.5" style="animation-delay: 2.8s"></circle>
-
-    <path class="ac-trace" pathLength="1000" d="M1440 240 H1390 L1310 320" stroke="#F2A900" stroke-width="2.5" style="stroke-dasharray: 1000; animation-delay: 0.8s"></path>
-    <path class="ac-flow" pathLength="1000" d="M1440 240 H1390 L1310 320" stroke="#FFD166" stroke-width="3" style="stroke-dasharray: 60 940; animation-delay: 3s; animation-duration: 3.5s"></path>
-    <circle class="ac-pulse" cx="1310" cy="320" r="5" fill="#F2A900" style="animation-delay: 1.4s"></circle>
-    <circle class="ac-ring" cx="1310" cy="320" r="5" fill="none" stroke="#F2A900" stroke-width="1.5" style="animation-delay: 2.4s"></circle>
-  </svg>
-
+<section id="inicio" class="hero">
   <div class="hero-logo" aria-hidden="true">
-    <div class="ac-float hero-logo__inner">
-      <div class="ac-reveal hero-logo__inner">
-        <img class="hero-logo__img" src="./assets/logo.png" alt="">
-        <div class="logo-sweep"></div>
-      </div>
-    </div>
+    <img class="hero-logo__img" src="./assets/logo-960.webp" alt="" width="960" height="960" decoding="async">
   </div>
 
   <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span class="hi-up hero-eyebrow__text" style="animation-delay: 0.25s">Consultoría Contable y Empresarial</span>
-    </div>
-    <h1 class="hero-title"><span class="hw" style="--i: 0"><span>Estrategia</span></span> <span class="hw" style="--i: 1"><span>y</span></span> <span class="hw" style="--i: 2"><span>gestión</span></span> <span class="hw" style="--i: 3"><span>para</span></span> <span class="hw" style="--i: 4"><span>tomar</span></span> <span class="hw" style="--i: 5"><span class="accent-word">mejores</span></span> <span class="hw" style="--i: 6"><span class="accent-word">decisiones</span></span></h1>
-    <p class="hi-up hero-lead" style="animation-delay: 1.15s">Acompañamos a empresas y PyMEs integrando análisis contable, financiero y de gestión para detectar oportunidades que agreguen valor a la empresa, resolver desafíos y construir soluciones adaptadas a cada negocio.</p>
-    <div class="hi-up hero-cta-row" style="animation-delay: 1.4s">
-      <a class="btn btn-shine" href="#contacto">Contacto<span class="btn-arrow" aria-hidden="true">→</span></a>
-      <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+    <p class="hero-eyebrow">Consultoría Contable y Empresarial</p>
+    <h1 class="hero-title">Estrategia y gestión para tomar <span class="accent-word">mejores decisiones</span></h1>
+    <p class="hero-lead">Acompañamos a empresas y PyMEs integrando análisis contable, financiero y de gestión para detectar oportunidades que agreguen valor a la empresa, resolver desafíos y construir soluciones adaptadas a cada negocio.</p>
+    <div class="hero-cta-row">
+      <a class="btn" href="#contacto">Contacto<span class="btn-arrow" aria-hidden="true">→</span></a>
+      <a class="link-arrow" href="#servicios">Ver servicios<span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
-<main id="contenido">
-
 <!-- ============ PROPUESTA DE VALOR ============ -->
-<section class="section section--white">
-  <div class="split">
-    <div class="sv-up split__col split__col--title">
-      <h2 class="valor-title">Estudiamos tu empresa de manera integral</h2>
-      <p class="section-lead">Contabilidad, finanzas, procesos y estrategia como partes de una misma realidad.</p>
-    </div>
-    <div class="sv-up split__col split__col--body">
-      <p>Gestionar una empresa implica mucho más que cumplir con sus obligaciones contables e impositivas.</p>
-      <p>Rentabilidad, costos, procesos, organización, estrategia comercial y de marketing y decisiones financieras forman parte de un mismo negocio.</p>
-      <p>En Accovance integramos esas dimensiones para ayudarte a entender cómo está posicionada tu empresa, situación de base, identificar oportunidades de mejora y definir hacia dónde avanzar.</p>
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split__col split__col--title">
+        <p class="eyebrow">Enfoque</p>
+        <h2 class="section-title">Estudiamos tu empresa de manera integral</h2>
+        <p class="section-lead">Contabilidad, finanzas, procesos y estrategia como partes de una misma realidad.</p>
+      </div>
+      <div class="split__col split__col--body">
+        <p>Gestionar una empresa implica mucho más que cumplir con sus obligaciones contables e impositivas.</p>
+        <p>Rentabilidad, costos, procesos, organización, estrategia comercial y de marketing y decisiones financieras forman parte de un mismo negocio.</p>
+        <p>En Accovance integramos esas dimensiones para ayudarte a entender cómo está posicionada tu empresa, situación de base, identificar oportunidades de mejora y definir hacia dónde avanzar.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ ENTENDER · DECIDIR · CRECER ============ -->
-<section class="big-words-band">
-  <div class="sv-stag big-words">
-    <span>Entender.</span>
-    <span>Decidir.</span>
-    <span><span class="paint">Crecer.</span></span>
+<section class="big-words-band" aria-label="Entender, decidir, crecer">
+  <div class="container">
+    <p class="big-words">
+      <span>Entender.</span>
+      <span>Decidir.</span>
+      <span class="big-words__last">Crecer.<span class="big-words__spark" aria-hidden="true"></span></span>
+    </p>
   </div>
 </section>
 
 <!-- ============ SERVICIOS ============ -->
-<section id="servicios" class="section section--paper">
+<section id="servicios" class="section">
   <div class="container">
-    <span class="sv-up eyebrow">Qué podemos hacer por tu empresa</span>
-    <h2 class="sv-up section-title">Soluciones adaptadas a cada etapa del negocio</h2>
-    <p class="sv-up section-lead">Acompañamos cada decisión con análisis contable, financiero y de gestión.</p>
-    <div class="sv-stag rows accordion">
-      <details class="hv-row hv-row--services" open>
-        <summary class="hv-row__summary"><h3>Consultoría Contable e Impositiva</h3><span class="hv-row__icon" aria-hidden="true"></span></summary>
+    <p class="eyebrow">Qué podemos hacer por tu empresa</p>
+    <h2 class="section-title">Soluciones adaptadas a cada etapa del negocio</h2>
+    <p class="section-lead">Acompañamos cada decisión con análisis contable, financiero y de gestión.</p>
+
+    <ul class="rows">
+      <li class="row">
+        <span class="row__num">01</span>
+        <h3>Consultoría Contable e Impositiva</h3>
         <p>Gestión y planificación contable e impositiva con una mirada que acompaña las decisiones de la empresa.</p>
-      </details>
-      <details class="hv-row hv-row--services" open>
-        <summary class="hv-row__summary"><h3>Gestión Económica y Financiera</h3><span class="hv-row__icon" aria-hidden="true"></span></summary>
+      </li>
+      <li class="row">
+        <span class="row__num">02</span>
+        <h3>Gestión Económica y Financiera</h3>
         <p>Costos, rentabilidad, flujo de fondos, presupuestos, indicadores y análisis económico-financiero.</p>
-      </details>
-      <details class="hv-row hv-row--services" open>
-        <summary class="hv-row__summary"><h3>Estrategia y Gestión Empresarial</h3><span class="hv-row__icon" aria-hidden="true"></span></summary>
+      </li>
+      <li class="row">
+        <span class="row__num">03</span>
+        <h3>Estrategia y Gestión Empresarial</h3>
         <p>Diagnóstico, planificación, organización, optimización de procesos y definición de prioridades.</p>
-      </details>
-      <details class="hv-row hv-row--services" open>
-        <summary class="hv-row__summary"><h3>Desarrollo Comercial</h3><span class="hv-row__icon" aria-hidden="true"></span></summary>
+      </li>
+      <li class="row">
+        <span class="row__num">04</span>
+        <h3>Desarrollo Comercial</h3>
         <p>Análisis de oportunidades, procesos comerciales, clientes, canales y herramientas para acompañar el crecimiento.</p>
-      </details>
-    </div>
-    <p class="sv-up note">No ofrecemos soluciones estandarizadas. Cada intervención parte de la realidad, los recursos y los objetivos de cada empresa.</p>
+      </li>
+    </ul>
+
+    <p class="note">No ofrecemos soluciones estandarizadas. Cada intervención parte de la realidad, los recursos y los objetivos de cada empresa.</p>
   </div>
 </section>
 
 <!-- ============ CÓMO TRABAJAMOS ============ -->
-<section id="metodo" class="section section--method">
+<section id="metodo" class="section section--forest">
   <div class="container">
-    <span class="sv-up eyebrow eyebrow--accent">Cómo trabajamos</span>
-    <h2 class="sv-up section-title section-title--light">De entender el problema a implementar la solución</h2>
-    <p class="sv-up section-lead section-lead--light">Un proceso ordenado, de la mano de la empresa en cada etapa.</p>
-    <div class="method">
-      <ol class="sv-stag steps">
-        <li class="step">
-          <span class="step__badge">#01</span>
-          <h3>Diagnosticar</h3>
-          <p>Conocemos la empresa, analizamos su situación e identificamos problemas, necesidades y oportunidades.</p>
-        </li>
-        <li class="step">
-          <span class="step__badge">#02</span>
-          <h3>Analizar</h3>
-          <p>Ordenamos la información y evaluamos las distintas áreas que impactan sobre el negocio.</p>
-        </li>
-        <li class="step">
-          <span class="step__badge">#03</span>
-          <h3>Diseñar</h3>
-          <p>Definimos prioridades y desarrollamos una estrategia y un plan de acción adaptados a la empresa.</p>
-        </li>
-        <li class="step">
-          <span class="step__badge">#04</span>
-          <h3>Implementar</h3>
-          <p>Acompañamos la puesta en práctica de las soluciones definidas.</p>
-        </li>
-        <li class="step">
-          <span class="step__badge">#05</span>
-          <h3>Medir y mejorar</h3>
-          <p>Evaluamos resultados, realizamos ajustes y acompañamos la evolución del negocio.</p>
-        </li>
-      </ol>
-    </div>
+    <p class="eyebrow">Cómo trabajamos</p>
+    <h2 class="section-title section-title--light">De entender el problema a implementar la solución</h2>
+    <p class="section-lead section-lead--light">Un proceso ordenado, de la mano de la empresa en cada etapa.</p>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step__num">01</span>
+        <h3>Diagnosticar</h3>
+        <p>Conocemos la empresa, analizamos su situación e identificamos problemas, necesidades y oportunidades.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">02</span>
+        <h3>Analizar</h3>
+        <p>Ordenamos la información y evaluamos las distintas áreas que impactan sobre el negocio.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">03</span>
+        <h3>Diseñar</h3>
+        <p>Definimos prioridades y desarrollamos una estrategia y un plan de acción adaptados a la empresa.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">04</span>
+        <h3>Implementar</h3>
+        <p>Acompañamos la puesta en práctica de las soluciones definidas.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">05</span>
+        <h3>Medir y mejorar</h3>
+        <p>Evaluamos resultados, realizamos ajustes y acompañamos la evolución del negocio.</p>
+      </li>
+    </ol>
   </div>
 </section>
 
 <!-- ============ DIFERENCIAL ============ -->
-<section class="section section--paper">
-  <div class="split">
-    <div class="sv-up split__col split__col--title">
-      <span class="eyebrow">Nuestro diferencial</span>
-      <h2 class="section-title">Consultoría con una mirada integral</h2>
-      <p class="section-lead">Contabilidad, finanzas, gestión y estrategia en una sola propuesta.</p>
-    </div>
-    <div class="sv-stag hv-col accordion">
-      <details class="hv-row hv-row--stack" open>
-        <summary class="hv-row__summary"><h3>Visión interdisciplinaria</h3><span class="hv-row__icon" aria-hidden="true"></span></summary>
-        <p>Integramos contabilidad, finanzas, gestión y estrategia.</p>
-      </details>
-      <details class="hv-row hv-row--stack" open>
-        <summary class="hv-row__summary"><h3>Decisiones basadas en información</h3><span class="hv-row__icon" aria-hidden="true"></span></summary>
-        <p>Transformamos datos en información clara y útil para decidir.</p>
-      </details>
-      <details class="hv-row hv-row--stack" open>
-        <summary class="hv-row__summary"><h3>Soluciones aplicables</h3><span class="hv-row__icon" aria-hidden="true"></span></summary>
-        <p>Diseñamos propuestas posibles de implementar según la realidad de cada organización.</p>
-      </details>
-      <details class="hv-row hv-row--stack" open>
-        <summary class="hv-row__summary"><h3>Acompañamiento</h3><span class="hv-row__icon" aria-hidden="true"></span></summary>
-        <p>No nos limitamos al diagnóstico. Trabajamos junto a la empresa durante el proceso de mejora.</p>
-      </details>
-      <details class="hv-row hv-row--stack" open>
-        <summary class="hv-row__summary"><h3>Conocimiento sectorial</h3><span class="hv-row__icon" aria-hidden="true"></span></summary>
-        <p>Comprender cómo funciona una actividad nos permite brindar respuestas más específicas.</p>
-      </details>
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split__col split__col--title">
+        <p class="eyebrow">Nuestro diferencial</p>
+        <h2 class="section-title">Consultoría con una mirada integral</h2>
+        <p class="section-lead">Contabilidad, finanzas, gestión y estrategia en una sola propuesta.</p>
+      </div>
+      <div class="split__col">
+        <ul class="rows rows--stack">
+          <li class="row">
+            <span class="row__num">01</span>
+            <div class="row__body">
+              <h3>Visión interdisciplinaria</h3>
+              <p>Integramos contabilidad, finanzas, gestión y estrategia.</p>
+            </div>
+          </li>
+          <li class="row">
+            <span class="row__num">02</span>
+            <div class="row__body">
+              <h3>Decisiones basadas en información</h3>
+              <p>Transformamos datos en información clara y útil para decidir.</p>
+            </div>
+          </li>
+          <li class="row">
+            <span class="row__num">03</span>
+            <div class="row__body">
+              <h3>Soluciones aplicables</h3>
+              <p>Diseñamos propuestas posibles de implementar según la realidad de cada organización.</p>
+            </div>
+          </li>
+          <li class="row">
+            <span class="row__num">04</span>
+            <div class="row__body">
+              <h3>Acompañamiento</h3>
+              <p>No nos limitamos al diagnóstico. Trabajamos junto a la empresa durante el proceso de mejora.</p>
+            </div>
+          </li>
+          <li class="row">
+            <span class="row__num">05</span>
+            <div class="row__body">
+              <h3>Conocimiento sectorial</h3>
+              <p>Comprender cómo funciona una actividad nos permite brindar respuestas más específicas.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ SECTORES ============ -->
 <section id="sectores" class="section section--olive">
-  <svg aria-hidden="true" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" fill="none" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%">
-    <path d="M0 620 H150 L270 740 H350" stroke="rgba(217,199,163,0.2)" stroke-width="2"></path>
-    <path class="ac-flow" pathLength="1000" d="M0 620 H150 L270 740 H350" stroke="var(--ac)" stroke-width="3" style="stroke-dasharray: 70 930; animation-delay: 0.5s; animation-duration: 6s"></path>
-    <circle class="ac-pulse" cx="350" cy="740" r="6" fill="var(--ac)"></circle>
-    <path d="M1440 90 H1310 L1210 190 V260" stroke="rgba(217,199,163,0.2)" stroke-width="2"></path>
-    <path class="ac-flow" pathLength="1000" d="M1440 90 H1310 L1210 190 V260" stroke="var(--ac)" stroke-width="3" style="stroke-dasharray: 70 930; animation-delay: 2s; animation-duration: 5s"></path>
-    <circle class="ac-pulse" cx="1210" cy="260" r="6" fill="var(--ac)" style="animation-delay: 1s"></circle>
-    <path d="M1440 700 H1380 L1320 640" stroke="rgba(242,169,0,0.45)" stroke-width="2.5"></path>
-    <path class="ac-flow" pathLength="1000" d="M1440 700 H1380 L1320 640" stroke="#FFD166" stroke-width="3" style="stroke-dasharray: 60 940; animation-delay: 1.2s; animation-duration: 3.5s"></path>
-    <circle class="ac-pulse" cx="1320" cy="640" r="5" fill="#F2A900" style="animation-delay: 1.6s"></circle>
-  </svg>
-  <div class="container layer">
-    <span class="sv-up eyebrow eyebrow--accent">Sectores</span>
-    <h2 class="sv-up section-title section-title--light section-title--wide">Experiencia que nos permite entender mejor cada negocio</h2>
-    <p class="sv-up section-lead section-lead--light sectores-intro">Trabajamos con PyMEs y empresas de diferentes actividades, con especial conocimiento en:</p>
-    <div class="sv-stag sectores-grid">
+  <div class="container">
+    <p class="eyebrow">Sectores</p>
+    <h2 class="section-title section-title--light">Experiencia que nos permite entender mejor cada negocio</h2>
+    <p class="section-lead section-lead--light">Trabajamos con PyMEs y empresas de diferentes actividades, con especial conocimiento en:</p>
+
+    <div class="sectores-grid">
       <div class="sc-col">
+        <span class="sc-col__num">01</span>
         <h3>Farmacias y sector farmacéutico</h3>
         <p>Gestión, rentabilidad, procesos, desarrollo comercial y evolución del negocio, comprendiendo las particularidades profesionales y regulatorias del sector.</p>
       </div>
       <div class="sc-col">
+        <span class="sc-col__num">02</span>
         <h3>Agro y actividades vinculadas</h3>
         <p>Gestión económica, financiera, contable e impositiva adaptada a las particularidades de la actividad.</p>
       </div>
       <div class="sc-col">
+        <span class="sc-col__num">03</span>
         <h3>PyMEs, comercios y servicios</h3>
         <p>Organización, análisis de gestión, procesos, planificación y desarrollo empresarial.</p>
       </div>
@@ -294,33 +340,87 @@
 </section>
 
 <!-- ============ ACCOVANCE ============ -->
-<section id="nosotros" class="section section--white">
-  <div class="split">
-    <div class="sv-up split__col split__col--title">
-      <span class="eyebrow">Accovance</span>
-      <h2 class="section-title">Una mirada profesional sobre cada decisión empresarial</h2>
-      <p class="section-lead">Nacimos en la contabilidad y evolucionamos hacia la consultoría integral.</p>
+<section id="nosotros" class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split__col split__col--title">
+        <p class="eyebrow">Accovance</p>
+        <h2 class="section-title">Una mirada profesional sobre cada decisión empresarial</h2>
+        <p class="section-lead">Nacimos en la contabilidad y evolucionamos hacia la consultoría integral.</p>
+      </div>
+      <div class="split__col split__col--body">
+        <p>Accovance nació desde la experiencia contable y evolucionó hacia una propuesta de consultoría integral, incorporando herramientas de gestión, análisis económico, estrategia y desarrollo empresarial.</p>
+        <p>Trabajamos cerca de nuestros clientes, buscando comprender cada negocio antes de proponer una solución.</p>
+        <blockquote class="quote">
+          <p>Porque detrás de cada número hay una decisión, y detrás de cada empresa, una realidad diferente.</p>
+        </blockquote>
+      </div>
     </div>
-    <div class="sv-up split__col split__col--body">
-      <p>Accovance nació desde la experiencia contable y evolucionó hacia una propuesta de consultoría integral, incorporando herramientas de gestión, análisis económico, estrategia y desarrollo empresarial.</p>
-      <p class="mb-40">Trabajamos cerca de nuestros clientes, buscando comprender cada negocio antes de proponer una solución.</p>
-      <div class="quote-divider"></div>
-      <p class="quote">Porque detrás de cada número hay una decisión, y detrás de cada empresa, una realidad diferente.</p>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS FRECUENTES ============ -->
+<section id="faq" class="section">
+  <div class="container">
+    <p class="eyebrow">Preguntas frecuentes</p>
+    <h2 class="section-title">Antes de la primera conversación</h2>
+    <p class="section-lead">Respuestas breves para entender cómo trabajamos.</p>
+
+    <div class="faq">
+      <div class="faq__item">
+        <h3>¿Qué diferencia hay entre un contador y un consultor contable?</h3>
+        <p>El contador se ocupa del cumplimiento contable e impositivo. La consultoría integra esa información con finanzas, procesos y estrategia para acompañar las decisiones de gestión. En Accovance trabajamos ambas dimensiones de manera conjunta.</p>
+      </div>
+      <div class="faq__item">
+        <h3>¿A qué tipo de empresas acompañan?</h3>
+        <p>Trabajamos con PyMEs y empresas de distintos sectores, con especial conocimiento en farmacias, agro, comercios y servicios. Cada acompañamiento se adapta al tamaño, la actividad y la etapa del negocio.</p>
+      </div>
+      <div class="faq__item">
+        <h3>¿Trabajan de forma presencial o virtual?</h3>
+        <p>De ambas formas. La atención puede ser presencial en Rauch o virtual, según las necesidades y la ubicación de cada empresa.</p>
+      </div>
+      <div class="faq__item">
+        <h3>¿Cómo empieza el trabajo?</h3>
+        <p>Comienza con una primera conversación para conocer la empresa, su situación y sus necesidades. Luego definimos un diagnóstico y un plan de acción con prioridades.</p>
+      </div>
+      <div class="faq__item">
+        <h3>¿Ofrecen soluciones estándar?</h3>
+        <p>No. Cada intervención parte de la realidad, los recursos y los objetivos de cada empresa. Por eso no trabajamos con paquetes cerrados.</p>
+      </div>
+      <div class="faq__item">
+        <h3>¿Dónde están ubicados?</h3>
+        <p>En Rauch, Provincia de Buenos Aires. Atendemos empresas de la zona y también de manera virtual.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ CONTACTO ============ -->
-<section id="contacto" class="section section--contact">
-  <img class="sv-reveal contact-deco" src="./assets/deco-contacto.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
-  <div class="contact-inner">
-    <div class="sv-up contact-main">
-      <span class="eyebrow eyebrow--accent">Contacto</span>
-      <h2 class="contact-title">Hablemos de tu empresa</h2>
-      <p class="contact-lead">Cada organización tiene desafíos diferentes.</p>
-      <p class="contact-text">Una primera conversación puede ayudarnos a conocer tu situación, identificar necesidades y evaluar de qué manera podemos acompañarte.</p>
-      <!-- TODO: cambiar href por https://wa.me/<numero> y el texto si corresponde -->
-      <a class="btn" href="#contacto" data-todo>Escribir por WhatsApp<span class="btn-arrow" aria-hidden="true">→</span></a>
+<section id="contacto" class="section section--forest">
+  <div class="container">
+    <div class="contact">
+      <div class="contact__main">
+        <p class="eyebrow">Contacto</p>
+        <h2 class="section-title section-title--light contact-title">Hablemos de tu empresa</h2>
+        <p class="contact-lead">Cada organización tiene desafíos diferentes.</p>
+        <p class="contact-text">Una primera conversación puede ayudarnos a conocer tu situación, identificar necesidades y evaluar de qué manera podemos acompañarte.</p>
+        <!-- TODO: agregar CTA (WhatsApp / email) cuando exista un canal real -->
+      </div>
+
+      <dl class="contact-data">
+        <div>
+          <dt>Ubicación</dt>
+          <dd>Rauch, Provincia de Buenos Aires</dd>
+        </div>
+        <div>
+          <dt>Modalidad</dt>
+          <dd>Atención presencial y virtual</dd>
+        </div>
+        <div>
+          <dt>Canales</dt>
+          <dd>Disponibles próximamente</dd>
+        </div>
+      </dl>
     </div>
   </div>
 </section>
@@ -334,7 +434,7 @@
     <div class="footer-col footer-col--brand">
       <div class="footer-brand">
         <div class="footer-brand__mark">
-          <img src="./assets/logo.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          <img src="./assets/logo-mark-256.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="256" height="256">
         </div>
         <div>
           <div class="footer-brand__name">ACCOVANCE</div>
@@ -345,51 +445,33 @@
     </div>
 
     <nav class="footer-col" aria-label="Navegación del pie de página">
-      <h2 class="footer-heading">Navegación</h2>
+      <p class="footer-heading">Navegación</p>
       <ul class="footer-list">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#metodo">Cómo trabajamos</a></li>
         <li><a href="#sectores">Sectores</a></li>
         <li><a href="#nosotros">Accovance</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
 
     <div class="footer-col">
-      <h2 class="footer-heading">Contacto</h2>
+      <p class="footer-heading">Contacto</p>
       <div class="footer-contact">
         <div class="footer-contact__group">
           <div class="footer-contact__label">Atención presencial y virtual</div>
           <div class="footer-contact__value">Rauch · Provincia de Buenos Aires</div>
         </div>
-        <div class="footer-contact__group footer-contact__group--links" id="canales">
-          <!-- TODO: reemplazar cada href por la vía real (wa.me / mailto:) -->
-          <a href="#contacto" data-todo>WhatsApp</a>
-          <a href="#contacto" data-todo>Email</a>
-        </div>
+        <!-- TODO: agregar WhatsApp / Email cuando existan los canales reales -->
       </div>
-    </div>
-
-    <div class="footer-col">
-      <h2 class="footer-heading">Redes</h2>
-      <ul class="footer-list">
-        <!-- TODO: reemplazar href por el perfil real y agregar target="_blank" rel="noopener" -->
-        <li><a href="#contacto" data-todo>LinkedIn</a></li>
-        <li><a href="#contacto" data-todo>Instagram</a></li>
-        <li><a href="#contacto" data-todo>Facebook</a></li>
-      </ul>
     </div>
 
   </div>
 
   <div class="site-footer__bottom">
     <div>© <span id="footer-year">2026</span> Accovance · Rauch, Provincia de Buenos Aires</div>
-    <nav class="site-footer__legal" aria-label="Enlaces legales">
-      <!-- TODO: enlazar a las páginas de aviso legal y privacidad cuando existan -->
-      <a href="#contacto" data-todo>Aviso legal</a>
-      <a href="#contacto" data-todo>Privacidad</a>
-    </nav>
   </div>
 </footer>
 
