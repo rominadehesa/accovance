@@ -32,7 +32,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/styles.css">
 
-<!-- TODO: completar url, sameAs (redes), telephone y email con los datos reales.
+<!-- TODO: completar url y email con los datos reales.
      Cuando exista el dominio, usar logo/url absolutas. -->
 <script type="application/ld+json">
 {
@@ -42,6 +42,15 @@
   "slogan": "Entender. Decidir. Crecer.",
   "description": "Consultoría contable, financiera y de gestión para empresas y PyMEs.",
   "logo": "./assets/logo-960.webp",
+  "telephone": "+5492494052353",
+  "founder": [
+    { "@type": "Person", "name": "Ana Clara Echandi", "jobTitle": "Socia fundadora" },
+    { "@type": "Person", "name": "Victoriano Cano", "jobTitle": "Socio fundador" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/accovance.consultora/"
+  ],
+  "hasMap": "https://maps.app.goo.gl/N7FMoQyAABb1nQ3cA",
   "areaServed": [
     { "@type": "City", "name": "Rauch" },
     { "@type": "AdministrativeArea", "name": "Provincia de Buenos Aires" },
@@ -49,6 +58,7 @@
   ],
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Letamendi 188",
     "addressLocality": "Rauch",
     "addressRegion": "Provincia de Buenos Aires",
     "addressCountry": "AR"
@@ -98,7 +108,7 @@
     {
       "@type": "Question",
       "name": "¿Dónde están ubicados?",
-      "acceptedAnswer": { "@type": "Answer", "text": "En Rauch, Provincia de Buenos Aires. Atendemos empresas de la zona y también de manera virtual." }
+      "acceptedAnswer": { "@type": "Answer", "text": "En Letamendi 188, Rauch, Provincia de Buenos Aires. Atendemos empresas de la zona y también de manera virtual." }
     }
   ]
 }
@@ -157,8 +167,8 @@
     <h1 class="hero-title">Estrategia y gestión para tomar <span class="accent-word">mejores decisiones</span></h1>
     <p class="hero-lead">Acompañamos a empresas y PyMEs integrando análisis contable, financiero y de gestión para detectar oportunidades que agreguen valor a la empresa, resolver desafíos y construir soluciones adaptadas a cada negocio.</p>
     <div class="hero-cta-row">
-      <a class="btn" href="#contacto">Contacto<span class="btn-arrow" aria-hidden="true">→</span></a>
-      <a class="link-arrow" href="#servicios">Ver servicios<span aria-hidden="true">→</span></a>
+      <a class="btn" href="#contacto">Contacto</a>
+      <a class="link-arrow" href="#servicios">Ver servicios</a>
     </div>
   </div>
 </section>
@@ -199,22 +209,74 @@
     <h2 class="section-title">Soluciones adaptadas a cada etapa del negocio</h2>
     <p class="section-lead">Acompañamos cada decisión con análisis contable, financiero y de gestión.</p>
 
-    <ul class="rows">
-      <li class="row">
-        <h3>Consultoría Contable e Impositiva</h3>
-        <p>Gestión y planificación contable e impositiva con una mirada que acompaña las decisiones de la empresa.</p>
+    <ul class="service-grid accordion" data-accordion>
+      <li class="service-card acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="servicio-1">
+            <span class="acc-trigger__label">Consultoría Contable e Impositiva</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="servicio-1" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>Gestión y planificación contable e impositiva con una mirada que acompaña las decisiones de la empresa.</p>
+          </div>
+        </div>
       </li>
-      <li class="row">
-        <h3>Gestión Económica y Financiera</h3>
-        <p>Costos, rentabilidad, flujo de fondos, presupuestos, indicadores y análisis económico-financiero.</p>
+      <li class="service-card acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="servicio-2">
+            <span class="acc-trigger__label">Gestión Económica y Financiera</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="servicio-2" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>Costos, rentabilidad, flujo de fondos, presupuestos, indicadores y análisis económico-financiero.</p>
+          </div>
+        </div>
       </li>
-      <li class="row">
-        <h3>Estrategia y Gestión Empresarial</h3>
-        <p>Diagnóstico, planificación, organización, optimización de procesos y definición de prioridades.</p>
+      <li class="service-card acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="servicio-3">
+            <span class="acc-trigger__label">Estrategia y Gestión Empresarial</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="servicio-3" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>Diagnóstico, planificación, organización, optimización de procesos y definición de prioridades.</p>
+          </div>
+        </div>
       </li>
-      <li class="row">
-        <h3>Desarrollo Comercial</h3>
-        <p>Análisis de oportunidades, procesos comerciales, clientes, canales y herramientas para acompañar el crecimiento.</p>
+      <li class="service-card acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="servicio-4">
+            <span class="acc-trigger__label">Desarrollo Comercial</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="servicio-4" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>Análisis de oportunidades, procesos comerciales, clientes, canales y herramientas para acompañar el crecimiento.</p>
+          </div>
+        </div>
       </li>
     </ul>
 
@@ -269,35 +331,90 @@
         <p class="section-lead">Contabilidad, finanzas, gestión y estrategia en una sola propuesta.</p>
       </div>
       <div class="split__col">
-        <ul class="rows rows--stack">
-          <li class="row">
-            <div class="row__body">
-              <h3>Visión interdisciplinaria</h3>
-              <p>Integramos contabilidad, finanzas, gestión y estrategia.</p>
+        <ul class="stack-accordion accordion" data-accordion>
+          <li class="stack-card acc-item">
+            <h3 class="acc-heading">
+              <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="diferencial-1">
+                <span class="acc-trigger__label">Visión interdisciplinaria</span>
+                <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+              </button>
+            </h3>
+            <div class="acc-panel" id="diferencial-1" aria-hidden="true">
+              <div class="acc-panel__inner">
+                <p>Integramos contabilidad, finanzas, gestión y estrategia.</p>
+              </div>
             </div>
           </li>
-          <li class="row">
-            <div class="row__body">
-              <h3>Decisiones basadas en información</h3>
-              <p>Transformamos datos en información clara y útil para decidir.</p>
+          <li class="stack-card acc-item">
+            <h3 class="acc-heading">
+              <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="diferencial-2">
+                <span class="acc-trigger__label">Decisiones basadas en información</span>
+                <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+              </button>
+            </h3>
+            <div class="acc-panel" id="diferencial-2" aria-hidden="true">
+              <div class="acc-panel__inner">
+                <p>Transformamos datos en información clara y útil para decidir.</p>
+              </div>
             </div>
           </li>
-          <li class="row">
-            <div class="row__body">
-              <h3>Soluciones aplicables</h3>
-              <p>Diseñamos propuestas posibles de implementar según la realidad de cada organización.</p>
+          <li class="stack-card acc-item">
+            <h3 class="acc-heading">
+              <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="diferencial-3">
+                <span class="acc-trigger__label">Soluciones aplicables</span>
+                <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+              </button>
+            </h3>
+            <div class="acc-panel" id="diferencial-3" aria-hidden="true">
+              <div class="acc-panel__inner">
+                <p>Diseñamos propuestas posibles de implementar según la realidad de cada organización.</p>
+              </div>
             </div>
           </li>
-          <li class="row">
-            <div class="row__body">
-              <h3>Acompañamiento</h3>
-              <p>No nos limitamos al diagnóstico. Trabajamos junto a la empresa durante el proceso de mejora.</p>
+          <li class="stack-card acc-item">
+            <h3 class="acc-heading">
+              <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="diferencial-4">
+                <span class="acc-trigger__label">Acompañamiento</span>
+                <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+              </button>
+            </h3>
+            <div class="acc-panel" id="diferencial-4" aria-hidden="true">
+              <div class="acc-panel__inner">
+                <p>No nos limitamos al diagnóstico. Trabajamos junto a la empresa durante el proceso de mejora.</p>
+              </div>
             </div>
           </li>
-          <li class="row">
-            <div class="row__body">
-              <h3>Conocimiento sectorial</h3>
-              <p>Comprender cómo funciona una actividad nos permite brindar respuestas más específicas.</p>
+          <li class="stack-card acc-item">
+            <h3 class="acc-heading">
+              <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="diferencial-5">
+                <span class="acc-trigger__label">Conocimiento sectorial</span>
+                <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+              </button>
+            </h3>
+            <div class="acc-panel" id="diferencial-5" aria-hidden="true">
+              <div class="acc-panel__inner">
+                <p>Comprender cómo funciona una actividad nos permite brindar respuestas más específicas.</p>
+              </div>
             </div>
           </li>
         </ul>
@@ -310,21 +427,80 @@
 <section id="sectores" class="section section--olive">
   <div class="container">
     <p class="eyebrow">Sectores</p>
-    <h2 class="section-title section-title--light">Experiencia que nos permite entender mejor cada negocio</h2>
+      <h2 class="section-title section-title--light">Más de 10 años de experiencia que nos permiten entender mejor cada negocio</h2>
     <p class="section-lead section-lead--light">Trabajamos con PyMEs y empresas de diferentes actividades, con especial conocimiento en:</p>
 
-    <div class="sectores-grid">
-      <div class="sc-col">
-        <h3>Farmacias y sector farmacéutico</h3>
-        <p>Gestión, rentabilidad, procesos, desarrollo comercial y evolución del negocio, comprendiendo las particularidades profesionales y regulatorias del sector.</p>
+    <div class="sectores-grid accordion" data-accordion>
+      <div class="sc-col acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="sector-1">
+            <span class="sc-col__heading">
+              <svg class="sc-col__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 8v8M8 12h8"></path>
+              </svg>
+              <span class="acc-trigger__label">Farmacias y sector farmacéutico</span>
+            </span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="sector-1" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>Gestión, rentabilidad, procesos, desarrollo comercial y evolución del negocio, comprendiendo las particularidades profesionales y regulatorias del sector.</p>
+          </div>
+        </div>
       </div>
-      <div class="sc-col">
-        <h3>Agro y actividades vinculadas</h3>
-        <p>Gestión económica, financiera, contable e impositiva adaptada a las particularidades de la actividad.</p>
+      <div class="sc-col acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="sector-2">
+            <span class="sc-col__heading">
+              <svg class="sc-col__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 4C11.5 4 4 8.5 4 16c0 2.2 1.8 4 4 4 7.5 0 12-7.5 12-16Z"></path>
+                <path d="M4 20c2.5-5.5 6.5-9.5 12-12"></path>
+              </svg>
+              <span class="acc-trigger__label">Agro y actividades vinculadas</span>
+            </span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="sector-2" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>Gestión económica, financiera, contable e impositiva adaptada a las particularidades de la actividad.</p>
+          </div>
+        </div>
       </div>
-      <div class="sc-col">
-        <h3>PyMEs, comercios y servicios</h3>
-        <p>Organización, análisis de gestión, procesos, planificación y desarrollo empresarial.</p>
+      <div class="sc-col acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="sector-3">
+            <span class="sc-col__heading">
+              <svg class="sc-col__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10v10h16V10"></path>
+                <path d="M3 10l2-6h14l2 6"></path>
+                <path d="M3 10h18"></path>
+                <path d="M9 20v-5h6v5"></path>
+              </svg>
+              <span class="acc-trigger__label">PyMEs, comercios y servicios</span>
+            </span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="sector-3" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>Organización, análisis de gestión, procesos, planificación y desarrollo empresarial.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -333,19 +509,84 @@
 <!-- ============ ACCOVANCE ============ -->
 <section id="nosotros" class="section">
   <div class="container">
-    <div class="split">
-      <div class="split__col split__col--title">
-        <p class="eyebrow">Accovance</p>
-        <h2 class="section-title">Una mirada profesional sobre cada decisión empresarial</h2>
-        <p class="section-lead">Nacimos en la contabilidad y evolucionamos hacia la consultoría integral.</p>
+    <div class="about">
+      <div class="split">
+        <div class="split__col split__col--title">
+          <p class="eyebrow">Accovance</p>
+          <h2 class="section-title">Una mirada profesional sobre cada decisión empresarial</h2>
+          <p class="section-lead">Nacimos en la contabilidad y evolucionamos hacia la consultoría integral.</p>
+        </div>
+        <div class="split__col split__col--body">
+          <p>Accovance nació desde la experiencia contable y evolucionó hacia una propuesta de consultoría integral, incorporando herramientas de gestión, análisis económico, estrategia y desarrollo empresarial.</p>
+          <p>Trabajamos cerca de nuestros clientes, buscando comprender cada negocio antes de proponer una solución.</p>
+          <blockquote class="quote">
+            <p>Porque detrás de cada número hay una decisión, y detrás de cada empresa, una realidad diferente.</p>
+          </blockquote>
+        </div>
       </div>
-      <div class="split__col split__col--body">
-        <p>Accovance nació desde la experiencia contable y evolucionó hacia una propuesta de consultoría integral, incorporando herramientas de gestión, análisis económico, estrategia y desarrollo empresarial.</p>
-        <p>Trabajamos cerca de nuestros clientes, buscando comprender cada negocio antes de proponer una solución.</p>
-        <blockquote class="quote">
-          <p>Porque detrás de cada número hay una decisión, y detrás de cada empresa, una realidad diferente.</p>
-        </blockquote>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIOS FUNDADORES ============ -->
+<section id="fundadores" class="section section--white">
+  <div class="container">
+    <div class="founders">
+      <div class="founders__header">
+        <p class="eyebrow">Socios fundadores</p>
+        <h2 class="section-title">Dos trayectorias complementarias para entender cada negocio</h2>
+        <p class="section-lead">Contabilidad, gestión y estrategia en una misma forma de acompañar.</p>
       </div>
+      <div class="founders__grid">
+        <article class="person-card">
+          <div class="person-card__media">
+            <img src="./assets/Socios/fundador-1.webp" alt="Retrato de Ana Clara Echandi, socia fundadora de Accovance" width="1000" height="1333" loading="lazy" decoding="async">
+          </div>
+          <div class="person-card__body">
+            <p class="person-card__role">Socia fundadora</p>
+            <h3 class="person-card__name">Ana Clara <br>Echandi</h3>
+            <ul class="person-card__credentials">
+              <li>Farmacéutica · UNLP</li>
+              <li>Magíster en Marketing Internacional · UNLP</li>
+              <li>Diplomada en Consultoría de Negocios para PyMEs · UBA</li>
+            </ul>
+          </div>
+        </article>
+        <article class="person-card">
+          <div class="person-card__media">
+            <img src="./assets/Socios/fundador-2.webp" alt="Retrato de Victoriano Cano, socio fundador de Accovance" width="1000" height="1333" loading="lazy" decoding="async">
+          </div>
+          <div class="person-card__body">
+            <p class="person-card__role">Socio fundador</p>
+            <h3 class="person-card__name">Victoriano <br>Cano</h3>
+            <ul class="person-card__credentials">
+              <li>Contador Público · UNLP</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIOS ESTRATÉGICOS ============ -->
+<section id="socios" class="section section--forest">
+  <div class="container">
+    <div class="partners">
+      <div class="partners__intro">
+        <p class="eyebrow">Socios estratégicos</p>
+        <h2 class="section-title section-title--light">Trabajamos con socios estratégicos</h2>
+        <p class="section-lead section-lead--light">Nos rodeamos de especialistas y aliados que complementan nuestra mirada y aportan experiencia en distintas áreas del negocio.</p>
+        <div class="partners__actions">
+          <a class="btn" href="https://wa.me/5492494052353?text=Hola%2C%20quiero%20sumarme%20como%20socio%20estrat%C3%A9gico%20de%20Accovance." target="_blank" rel="noopener noreferrer" aria-label="Quiero sumarme como socio estratégico por WhatsApp">Quiero sumarme</a>
+        </div>
+      </div>
+      <article class="person-card partners__card">
+        <div class="person-card__media">
+          <img src="./assets/Socios/socio-estrategico.webp" alt="Retrato de un socio estratégico de Accovance" width="1000" height="1333" loading="lazy" decoding="async">
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -357,30 +598,108 @@
     <h2 class="section-title">Antes de la primera conversación</h2>
     <p class="section-lead">Respuestas breves para entender cómo trabajamos.</p>
 
-    <div class="faq">
-      <div class="faq__item">
-        <h3>¿Qué diferencia hay entre un contador y un consultor contable?</h3>
-        <p>El contador se ocupa del cumplimiento contable e impositivo. La consultoría integra esa información con finanzas, procesos y estrategia para acompañar las decisiones de gestión. En Accovance trabajamos ambas dimensiones de manera conjunta.</p>
+    <div class="faq accordion" data-accordion>
+      <div class="faq__item acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-1">
+            <span class="acc-trigger__label">¿Qué diferencia hay entre un contador y un consultor contable?</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="faq-1" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>El contador se ocupa del cumplimiento contable e impositivo. La consultoría integra esa información con finanzas, procesos y estrategia para acompañar las decisiones de gestión. En Accovance trabajamos ambas dimensiones de manera conjunta.</p>
+          </div>
+        </div>
       </div>
-      <div class="faq__item">
-        <h3>¿A qué tipo de empresas acompañan?</h3>
-        <p>Trabajamos con PyMEs y empresas de distintos sectores, con especial conocimiento en farmacias, agro, comercios y servicios. Cada acompañamiento se adapta al tamaño, la actividad y la etapa del negocio.</p>
+      <div class="faq__item acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-2">
+            <span class="acc-trigger__label">¿A qué tipo de empresas acompañan?</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="faq-2" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>Trabajamos con PyMEs y empresas de distintos sectores, con especial conocimiento en farmacias, agro, comercios y servicios. Cada acompañamiento se adapta al tamaño, la actividad y la etapa del negocio.</p>
+          </div>
+        </div>
       </div>
-      <div class="faq__item">
-        <h3>¿Trabajan de forma presencial o virtual?</h3>
-        <p>De ambas formas. La atención puede ser presencial en Rauch o virtual, según las necesidades y la ubicación de cada empresa.</p>
+      <div class="faq__item acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-3">
+            <span class="acc-trigger__label">¿Trabajan de forma presencial o virtual?</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="faq-3" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>De ambas formas. La atención puede ser presencial en Rauch o virtual, según las necesidades y la ubicación de cada empresa.</p>
+          </div>
+        </div>
       </div>
-      <div class="faq__item">
-        <h3>¿Cómo empieza el trabajo?</h3>
-        <p>Comienza con una primera conversación para conocer la empresa, su situación y sus necesidades. Luego definimos un diagnóstico y un plan de acción con prioridades.</p>
+      <div class="faq__item acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-4">
+            <span class="acc-trigger__label">¿Cómo empieza el trabajo?</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="faq-4" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>Comienza con una primera conversación para conocer la empresa, su situación y sus necesidades. Luego definimos un diagnóstico y un plan de acción con prioridades.</p>
+          </div>
+        </div>
       </div>
-      <div class="faq__item">
-        <h3>¿Ofrecen soluciones estándar?</h3>
-        <p>No. Cada intervención parte de la realidad, los recursos y los objetivos de cada empresa. Por eso no trabajamos con paquetes cerrados.</p>
+      <div class="faq__item acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-5">
+            <span class="acc-trigger__label">¿Ofrecen soluciones estándar?</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="faq-5" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>No. Cada intervención parte de la realidad, los recursos y los objetivos de cada empresa. Por eso no trabajamos con paquetes cerrados.</p>
+          </div>
+        </div>
       </div>
-      <div class="faq__item">
-        <h3>¿Dónde están ubicados?</h3>
-        <p>En Rauch, Provincia de Buenos Aires. Atendemos empresas de la zona y también de manera virtual.</p>
+      <div class="faq__item acc-item">
+        <h3 class="acc-heading">
+          <button class="acc-trigger" type="button" aria-expanded="false" aria-controls="faq-6">
+            <span class="acc-trigger__label">¿Dónde están ubicados?</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"></path>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="faq-6" aria-hidden="true">
+          <div class="acc-panel__inner">
+            <p>En Letamendi 188, Rauch, Provincia de Buenos Aires. Atendemos empresas de la zona y también de manera virtual.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -395,21 +714,48 @@
         <h2 class="section-title section-title--light contact-title">Hablemos de tu empresa</h2>
         <p class="contact-lead">Cada organización tiene desafíos diferentes.</p>
         <p class="contact-text">Una primera conversación puede ayudarnos a conocer tu situación, identificar necesidades y evaluar de qué manera podemos acompañarte.</p>
-        <!-- TODO: agregar CTA (WhatsApp / email) cuando exista un canal real -->
+        <div class="contact-cta">
+          <a class="btn" href="https://wa.me/5492494052353" target="_blank" rel="noopener noreferrer" aria-label="Hablemos por WhatsApp">Hablemos<span class="btn-arrow" aria-hidden="true">→</span></a>
+        </div>
       </div>
 
       <dl class="contact-data">
         <div>
           <dt>Ubicación</dt>
-          <dd>Rauch, Provincia de Buenos Aires</dd>
+          <dd>
+            Letamendi 188, Rauch, Provincia de Buenos Aires
+            <a class="contact-map" href="https://maps.app.goo.gl/N7FMoQyAABb1nQ3cA" target="_blank" rel="noopener noreferrer" aria-label="Abrir la ubicación de Accovance en Google Maps">
+              <img src="./assets/mapa-ubicacion.jpeg" alt="Mapa de la ubicación de Accovance en Letamendi 188, Rauch" width="1143" height="1376" loading="lazy" decoding="async">
+            </a>
+          </dd>
         </div>
         <div>
           <dt>Modalidad</dt>
           <dd>Atención presencial y virtual</dd>
         </div>
         <div>
-          <dt>Canales</dt>
-          <dd>Disponibles próximamente</dd>
+          <dt>Redes Sociales</dt>
+            <dd class="contact-links">
+              <a class="contact-link" href="https://www.instagram.com/accovance.consultora/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                <svg class="contact-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"></circle>
+                </svg>
+              </a>
+              <a class="contact-link" href="https://wa.me/5492494052353" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                <svg class="contact-link__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"></path>
+                </svg>
+              </a>
+              <span class="contact-link contact-links__pending" role="img" aria-label="Email" title="Email">
+                <svg class="contact-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="m3 7 9 6 9-6"></path>
+                </svg>
+              </span>
+              <!-- TODO: convertir Email en enlace cuando esté el dato real -->
+            </dd>
         </div>
       </dl>
     </div>
@@ -453,16 +799,26 @@
       <div class="footer-contact">
         <div class="footer-contact__group">
           <div class="footer-contact__label">Atención presencial y virtual</div>
-          <div class="footer-contact__value">Rauch · Provincia de Buenos Aires</div>
+          <div class="footer-contact__value">Letamendi 188 · Rauch · Provincia de Buenos Aires</div>
+          <div class="footer-contact__value"><a href="https://maps.app.goo.gl/N7FMoQyAABb1nQ3cA" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a></div>
         </div>
-        <!-- TODO: agregar WhatsApp / Email cuando existan los canales reales -->
+        <div class="footer-contact__group">
+          <div class="footer-contact__label">Redes Sociales</div>
+          <div class="footer-contact__value">
+            <a href="https://www.instagram.com/accovance.consultora/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <span class="footer-contact__sep"> · </span>
+            <a href="https://wa.me/5492494052353" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <span class="footer-contact__pending"> · Email</span>
+          </div>
+          <!-- TODO: convertir Email en enlace cuando esté el dato real -->
+        </div>
       </div>
     </div>
 
   </div>
 
   <div class="site-footer__bottom">
-    <div>© <span id="footer-year">2026</span> Accovance · Rauch, Provincia de Buenos Aires</div>
+    <div>© <span id="footer-year">2026</span> Accovance · Letamendi 188, Rauch, Provincia de Buenos Aires</div>
   </div>
 </footer>
 

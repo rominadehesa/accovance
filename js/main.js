@@ -2,8 +2,8 @@
    ACCOVANCE — interacciones
    - Header sticky: alto real (--header-h) y estado .is-stuck
    - Navegación: scrollspy (aria-current) y menú móvil
+   - Acordeones: apertura y cierre accesibles con transición
    - Año dinámico en el pie
-   Sin efectos de cursor, progreso de lectura ni acordeones.
    ============================================================= */
 (function () {
   'use strict';
@@ -55,6 +55,32 @@
       if (window.innerWidth > 940) closeMenu();
     }, { passive: true });
   }
+
+  /* ---------- Acordeones ---------- */
+  var accordions = document.querySelectorAll('[data-accordion]');
+  accordions.forEach(function (accordion) {
+    accordion.classList.add('is-ready');
+
+    accordion.querySelectorAll('.acc-item').forEach(function (item) {
+      var trigger = item.querySelector('.acc-trigger');
+      var panel = item.querySelector('.acc-panel');
+      if (!trigger || !panel) return;
+
+      var setOpen = function (open) {
+        item.classList.toggle('is-open', open);
+        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if (open) panel.removeAttribute('inert');
+        else panel.setAttribute('inert', '');
+      };
+
+      setOpen(false);
+
+      trigger.addEventListener('click', function () {
+        setOpen(trigger.getAttribute('aria-expanded') !== 'true');
+      });
+    });
+  });
 
   /* ---------- Scrollspy (solo secciones del menú) ---------- */
   var links = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
