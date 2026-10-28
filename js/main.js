@@ -33,7 +33,15 @@
   /* ---------- Menú móvil ---------- */
   var menu = document.getElementById('nav-menu');
   if (menu) {
+    var summary = menu.querySelector('summary');
     var closeMenu = function () { if (menu.open) menu.open = false; };
+
+    menu.addEventListener('toggle', function () {
+      var open = menu.open;
+      document.body.classList.toggle('menu-open', open);
+      if (header) header.classList.toggle('is-menu-open', open);
+      if (summary) summary.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    });
 
     menu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', closeMenu);
@@ -46,7 +54,6 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && menu.open) {
         closeMenu();
-        var summary = menu.querySelector('summary');
         if (summary) summary.focus();
       }
     });
