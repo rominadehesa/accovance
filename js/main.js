@@ -96,6 +96,39 @@
     }
   }
 
+  /* ---------- Video del hero: respetar movimiento reducido ---------- */
+  var heroVideo = document.querySelector('.hero-media__video');
+  if (heroVideo) {
+    var motionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+
+    var syncHeroVideo = function () {
+      if (motionQuery && motionQuery.matches) {
+        heroVideo.autoplay = false;
+        heroVideo.pause();
+      } else {
+        var attempt = heroVideo.play();
+        if (attempt && typeof attempt.catch === 'function') {
+          attempt.catch(function () {});
+        }
+      }
+    };
+
+    syncHeroVideo();
+
+    if (motionQuery) {
+      if (typeof motionQuery.addEventListener === 'function') {
+        motionQuery.addEventListener('change', syncHeroVideo);
+      } else if (typeof motionQuery.addListener === 'function') {
+        motionQuery.addListener(syncHeroVideo);
+      }
+    }
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) heroVideo.pause();
+      else syncHeroVideo();
+    });
+  }
+
   /* ---------- Números: reveal editorial ---------- */
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduceMotion && 'IntersectionObserver' in window) {
