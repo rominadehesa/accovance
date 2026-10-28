@@ -989,8 +989,13 @@ main:focus, main:focus-visible { outline: none; }
   .service-card .acc-trigger__label { font-size: 18px; }
   .faq .acc-trigger { min-height: 64px; padding: 16px 0; }
   .founders__grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .founders .person-card { grid-template-columns: 140px minmax(0, 1fr); gap: 16px; }
-  .founders .person-card__name { font-size: 19px; }
+  .founders .person-card { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .founders .person-card__body { padding-top: 16px; }
+  .founders .person-card__role { font-size: 11px; }
+  .founders .person-card__name { font-size: 24px; }
+  .founders .person-card__credentials { font-size: 15px; line-height: 1.6; }
+  .partners__card { order: -1; max-width: none; }
+  .contact-map { max-width: none; width: 100%; }
   .step__num { font-size: 36px; }
 }
 
@@ -1006,8 +1011,7 @@ main:focus, main:focus-visible { outline: none; }
   .hero-cta-row { flex-direction: column; align-items: stretch; }
   .btn { justify-content: center; }
   .link-arrow { justify-content: center; border-bottom: 0; }
-  .founders .person-card { grid-template-columns: 124px minmax(0, 1fr); gap: 14px; }
-  .founders .person-card__name { font-size: 18px; }
+  .founders .person-card { gap: 14px; }
 }
 
 /* ---------- Movimiento reducido ---------- */
