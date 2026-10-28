@@ -96,24 +96,43 @@
     }
   }
 
-  /* ---------- Video del hero: respetar movimiento reducido ---------- */
+  /* ---------- Video del hero: autoplay con fallback ---------- */
   var heroVideo = document.querySelector('.hero-media__video');
   if (heroVideo) {
     var motionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+
+    var playHeroVideo = function () {
+      if (motionQuery && motionQuery.matches) return;
+      heroVideo.muted = true;
+      heroVideo.playsInline = true;
+      heroVideo.setAttribute('webkit-playsinline', '');
+      var attempt = heroVideo.play();
+      if (attempt && typeof attempt.catch === 'function') {
+        attempt.catch(function () {});
+      }
+    };
 
     var syncHeroVideo = function () {
       if (motionQuery && motionQuery.matches) {
         heroVideo.autoplay = false;
         heroVideo.pause();
       } else {
-        var attempt = heroVideo.play();
-        if (attempt && typeof attempt.catch === 'function') {
-          attempt.catch(function () {});
-        }
+        playHeroVideo();
       }
     };
 
     syncHeroVideo();
+
+    ['loadedmetadata', 'loadeddata', 'canplay', 'canplaythrough'].forEach(function (eventName) {
+      heroVideo.addEventListener(eventName, playHeroVideo);
+    });
+
+    var resumeOnInteraction = function () {
+      if (heroVideo.paused) playHeroVideo();
+    };
+    ['touchstart', 'pointerdown', 'click', 'keydown'].forEach(function (eventName) {
+      document.addEventListener(eventName, resumeOnInteraction, { passive: true });
+    });
 
     if (motionQuery) {
       if (typeof motionQuery.addEventListener === 'function') {
@@ -127,6 +146,8 @@
       if (document.hidden) heroVideo.pause();
       else syncHeroVideo();
     });
+
+    window.addEventListener('pageshow', syncHeroVideo);
   }
 
   /* ---------- Números: reveal editorial ---------- */
